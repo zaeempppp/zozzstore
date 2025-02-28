@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 شحن الرصيد - زعيم ستور 🔥</title>
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: #111;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #f00, 0 0 40px #f00;
+        }
+
+        .title {
+            font-size: 26px;
+            color: #f00;
+            text-shadow: 0 0 10px #f00, 0 0 20px #f00;
+            font-weight: bold;
+        }
+
+        h3 {
+            font-size: 18px;
+            color: #ff2020;
+        }
+
+        .input-box {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            background: #222;
+            color: #fff;
+            text-align: center;
+            box-shadow: 0 0 10px #f00;
+        }
+
+        .btn {
+            background: #f00;
+            border: none;
+            color: #fff;
+            padding: 12px;
+            font-size: 18px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+            box-shadow: 0 0 10px #f00;
+        }
+
+        .btn:hover {
+            background: #ff2020;
+            box-shadow: 0 0 20px #f00;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="title">🔥 شحن الرصيد 🔥</div>
+        <h3>📩 ابعت الـ ID بتاعك هنا عشان أشحن لك واتس فقط: <br> 01097169122</h3>
+
+        <input type="text" id="userID" class="input-box" placeholder="🆔 ID حسابك" readonly>
+
+        <button class="btn" onclick="sendToWhatsApp()">📩 إرسال الطلب</button>
+    </div>
+
+    <script>
+        // جلب ID المستخدم من المتصفح
+        document.getElementById("userID").value = localStorage.getItem("userID") || "غير متوفر";
+
+        function sendToWhatsApp() {
+            const userID = document.getElementById("userID").value;
+            const phoneNumber = "01097169122"; // رقمك على واتساب لاستقبال الطلبات
+            const message = `طلب شحن رصيد:\n🔹 ID الحساب: ${userID}`;
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+            window.open(whatsappURL, "_blank");
+        }
+    </script>
+
+</body>
+</html>
