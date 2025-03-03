@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🔥 ZAEEM STORE 🔥</title>
+    <title>𝑺𝑯𝑶𝑷 𝑺𝑻𝑶𝑹𝑬</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+
         body {
-            background: #000;
+            background: linear-gradient(135deg, #000, #444);
             color: #fff;
-            font-family: Arial, sans-serif;
+            font-family: "Amiri", serif;
             text-align: center;
             margin: 0;
             padding: 20px;
@@ -17,30 +19,31 @@
         .container {
             max-width: 450px;
             margin: auto;
-            background: #111;
+            background: rgba(17, 17, 17, 0.9);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 20px #f00, 0 0 40px #f00;
+            box-shadow: 0 0 30px #f00, 0 0 10px #ff0000;
         }
 
         .title {
             font-size: 26px;
-            color: #f00;
-            text-shadow: 0 0 10px #f00, 0 0 20px #f00;
+            color: #ff0000;
             font-weight: bold;
+            text-shadow: 0 0 20px #ff0000;
         }
 
         .balance-box, .id-box {
             font-size: 20px;
             margin-top: 15px;
             padding: 10px;
-            background: #222;
+            background: rgba(34, 34, 34, 0.9);
             border-radius: 5px;
             font-weight: bold;
+            box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
         }
 
         .btn {
-            background: #f00;
+            background: #ff0000;
             border: none;
             color: #fff;
             padding: 12px;
@@ -50,125 +53,147 @@
             cursor: pointer;
             transition: 0.3s;
             margin-top: 10px;
+            box-shadow: 0 5px 10px rgba(255, 0, 0, 0.5), 0 0 15px rgba(255, 0, 0, 0.5);
         }
 
         .btn:hover {
             background: #ff2020;
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
         }
 
         .product {
-            background: #222;
+            background: rgba(34, 34, 34, 0.9);
             padding: 15px;
             margin-top: 10px;
             border-radius: 5px;
-            box-shadow: 0 0 10px #f00;
+            box-shadow: 0 0 10px #f00, 0 0 20px #f00;
         }
 
-        .product-title {
-            font-size: 18px;
-            color: #ff2020;
-            font-weight: bold;
-        }
-
-        .price {
-            font-size: 16px;
-            color: #0f0;
-        }
-
-        .download-link {
+        #adminPanel {
             display: none;
-            margin-top: 10px;
-            font-size: 16px;
-            color: #00f;
-            text-decoration: underline;
-            cursor: pointer;
+            background: rgba(34, 34, 34, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 0 30px #f00, 0 0 10px #ff0000;
         }
     </style>
 </head>
-<body>
+<body ondblclick="incrementClick()">
 
     <div class="container">
-        <div class="title">🔥 ZAEEM STORE 🔥</div>
+        <div class="title">𝑺𝑯𝑶𝑷 𝑺𝑻𝑶𝑹𝑬</div>
 
-        <div class="id-box">🆔 Your ID: <span id="userID">Generating...</span></div>
-        <div class="balance-box">💰 Balance: <span id="balance">0</span> EGP</div>
+        <div class="id-box">𝑰𝑫: <span id="userID">...</span></div>
+        <div class="balance-box">𝑩𝒂𝒍𝒂𝒏𝒄𝒆: <span id="balance">0</span> 𝑬𝑮𝑷</div>
 
-        <div class="title" style="margin-top: 20px;">🔥 Other Products</div>
+        <div class="title" style="margin-top: 20px;">𝑪𝒉𝒆𝒄𝒌 𝑶𝒖𝒕 𝑶𝒖𝒓 𝑷𝒓𝒐𝒅𝒖𝒄𝒕𝒔</div>
 
         <div class="product">
-            <div class="product-title">🎭 Config Way</div>
-            <div class="price">💰 Price: 25 EGP</div>
-            <button class="btn" onclick="buyProduct(25, 'config')">Buy Now</button>
-            <div class="download-link" id="download-config" onclick="downloadFile('config')">🔗 Download</div>
+            <div>𝑺𝒂𝒉𝒃 𝑺𝒖𝒘𝒂𝒓</div>
+            <button class="btn" onclick="buyProduct(15, 'https://mega.nz/file/sWUgXJiA#7Czg9VHGXw0cvCbLExVrPT8rFH6S7wvYN_3k58L2zzo')">𝑩𝒖𝒚 - 15 𝑬𝑮𝑷</button>
         </div>
 
         <div class="product">
-            <div class="product-title">📺 Free Views Website</div>
-            <div class="price">💰 Price: 35 EGP</div>
-            <button class="btn" onclick="buyProduct(35, 'views')">Buy Now</button>
-            <div class="download-link" id="download-views" onclick="downloadFile('views')">🔗 Download</div>
+            <div>𝑭𝒂𝒓𝒎𝒂𝒕𝒂</div>
+            <button class="btn" onclick="buyProduct(7, 'https://mega.nz/file/dadlSZ7C#QN89oW4MhZHeKhNgksuRmWsXg1SCEa1oSkyK9RXL0PU')">𝑩𝒖𝒚 - 7 𝑬𝑮𝑷</button>
         </div>
 
         <div class="product">
-            <div class="product-title">📱 Fake Numbers Website</div>
-            <div class="price">💰 Price: 45 EGP</div>
-            <button class="btn" onclick="buyProduct(45, 'numbers')">Buy Now</button>
-            <div class="download-link" id="download-numbers" onclick="downloadFile('numbers')">🔗 Download</div>
+            <div>𝑭𝒂𝒌𝒆 𝑵𝒖𝒎𝒃𝒆𝒓𝒔</div>
+            <button class="btn" onclick="buyProduct(20, 'https://getfreesmsnumber.com/')">𝑩𝒖𝒚 - 20 𝑬𝑮𝑷</button>
         </div>
 
         <div class="product">
-            <div class="product-title">📲 Format App</div>
-            <div class="price">💰 Price: 10 EGP</div>
-            <button class="btn" onclick="buyProduct(10, 'format')">Buy Now</button>
-            <div class="download-link" id="download-format" onclick="downloadFile('format')">🔗 Download</div>
+            <div>𝑻𝑰𝑲𝑻𝑶𝑲 𝑽𝑰𝑬𝑾𝑺</div>
+            <button class="btn" onclick="buyProduct(15, 'https://zefoy.com/')">𝑩𝒖𝒚 - 15 𝑬𝑮𝑷</button>
         </div>
 
+        <div class="product">
+            <div>𝑪𝒉𝒆𝒂𝒑 𝑷𝒓𝒐𝒈𝒓𝒂𝒎 𝑺𝒆𝒓𝒗𝒊𝒄𝒆𝒔</div>
+            <button class="btn" onclick="buyProduct(65, 'https://fast70.com/')">𝑩𝒖𝒚 - 65 𝑬𝑮𝑷</button>
+        </div>
+
+        <div class="product">
+            <div>𝟏𝟎𝟎𝟎 𝑻𝒊𝒌𝑻𝒐𝒌 𝑭𝒐𝒍𝒍𝒐𝒘𝒆𝒓𝒔</div>
+            <button class="btn" onclick="buyProduct(35, 'whatsapp://send?phone=+201097169122')">𝑩𝒖𝒚 - 35 𝑬𝑮𝑷</button>
+        </div>
+
+        <div id="adminPanel">
+            <h3>𝑨𝒅𝒎𝒊𝒏 𝑺𝒆𝒄𝒕𝒊𝒐𝒏</h3>
+            <input type="text" id="targetID" placeholder="𝑬𝒏𝒕𝒆𝒓 𝑰𝑫">
+            <input type="number" id="amount" placeholder="𝑬𝒏𝒕𝒆𝒓 𝑨𝒎𝒐𝒖𝒏𝒕">
+            <button class="btn" onclick="addBalance()">𝑨𝒅𝒅 𝑩𝒂𝒍𝒂𝒏𝒄𝒆</button>
+            <button class="btn" onclick="resetBalances()">𝑹𝒆𝒔𝒆𝒕 𝑨𝒄𝒄𝒐𝒖𝒏𝒕𝒔</button>
+        </div>
     </div>
 
     <script>
-        let downloadLinks = {
-            "config": "https://yourdownloadlink.com/config",
-            "views": "https://yourdownloadlink.com/views",
-            "numbers": "https://yourdownloadlink.com/numbers",
-            "format": "https://yourdownloadlink.com/format"
-        };
+        let users = {};
+        let clicks = 0;
 
         function generateUserID() {
             let userID = localStorage.getItem("userID");
             if (!userID) {
-                userID = "ZAEEM" + Math.floor(100000 + Math.random() * 900000);
+                userID = "ID-" + Math.floor(100000 + Math.random() * 900000);
                 localStorage.setItem("userID", userID);
             }
             document.getElementById("userID").innerText = userID;
-            updateBalanceUI();
+
+            // استرجاع الرصيد من localStorage
+            let storedBalance = localStorage.getItem(userID);
+            users[userID] = storedBalance ? parseInt(storedBalance) : 0; // تأكد من وجود رصيد للمستخدم
+            updateBalance();
         }
 
-        function updateBalanceUI() {
-            const userID = localStorage.getItem("userID");
-            const balance = localStorage.getItem("balance_" + userID) || 0;
-            document.getElementById("balance").innerText = balance;
+        function updateBalance() {
+            let userID = document.getElementById("userID").innerText;
+            document.getElementById("balance").innerText = users[userID];
+            // تخزين الرصيد في localStorage
+            localStorage.setItem(userID, users[userID]);
         }
 
-        function buyProduct(price, type) {
-            const userID = localStorage.getItem("userID");
-            let userBalance = parseFloat(localStorage.getItem("balance_" + userID)) || 0;
-
-            if (userBalance < price) {
-                alert("❌ Insufficient balance!");
-                return;
+        function buyProduct(price, link) {
+            let userID = document.getElementById("userID").innerText;
+            if (users[userID] >= price) {
+                users[userID] -= price;
+                updateBalance();
+                window.open(link, "_blank");
+            } else {
+                alert("رصيد غير كافٍ!");
             }
-
-            userBalance -= price;
-            localStorage.setItem("balance_" + userID, userBalance);
-            updateBalanceUI();
-
-            document.getElementById("download-" + type).style.display = "block";
-
-            alert(`✅ Order placed!\n📌 Product: ${type}\n💰 Price: ${price} EGP\n🔗 Download is now available!`);
         }
 
-        function downloadFile(type) {
-            window.open(downloadLinks[type], "_blank");
+        function addBalance() {
+            const targetID = document.getElementById("targetID").value;
+            const amount = parseInt(document.getElementById("amount").value);
+            
+            if (users[targetID] !== undefined && amount > 0) {
+                users[targetID] += amount;
+                alert(`تم إضافة ${amount} 𝑬𝑮𝑷 إلى ${targetID}`);
+                updateBalance(); // تحديث الرصيد للمستخدم الحالي
+            } else {
+                alert("معرف المستخدم غير صحيح أو المبلغ غير صالح!");
+            }
+        }
+
+        function resetBalances() {
+            users = {};
+            localStorage.clear(); // مسح localStorage
+            alert("تم إعادة تعيين جميع الحسابات!");
+            updateBalance(); // تحديث الرصيد للمستخدم الحالي
+        }
+
+        function incrementClick() {
+            clicks++;
+            if (clicks === 4) {
+                let password = prompt("أدخل كلمة المرور:");
+                if (password === "اكرمنا يارب") {
+                    document.getElementById("adminPanel").style.display = "block";
+                }
+                clicks = 0;
+            }
         }
 
         generateUserID();
